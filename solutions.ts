@@ -4,3 +4,17 @@ function multiplyValue(value: number, multiplier?: number): number {
   }
   return value * multiplier;
 }
+
+
+function processInput(input: string | number | boolean): string | number {
+  if (typeof input === "string") {
+    return input.trim().toLowerCase();
+  } else if (typeof input === "number") {
+    return input * 10;
+  } else {
+    if (input === true) {
+      return "Active";
+    }
+    return "Inactive";
+  }
+}
