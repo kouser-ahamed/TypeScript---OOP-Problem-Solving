@@ -25,3 +25,14 @@ function formatCoordinate(coordinate: readonly [number, number, string]): string
   const locationName = coordinate[2];
   return "Location: " + locationName + " (" + latitude + ", " + longitude + ")";
 }
+
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  const result: T[] = [];
+  for (let i = 0; i < arrays.length; i++) {
+    for (let j = 0; j < arrays[i].length; j++) {
+      result.push(arrays[i][j]);
+    }
+  }
+  return result;
+}
