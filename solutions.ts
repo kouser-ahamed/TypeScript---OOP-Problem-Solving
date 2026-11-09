@@ -54,3 +54,12 @@ function getPopularCourses(courses: Course[], minStudents: number): Course[] {
   }
   return popularCourses;
 }
+
+
+function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
+  const values: T[K][] = [];
+  for (const item of items) {
+    values.push(item[key]);
+  }
+  return values;
+}
