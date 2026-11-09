@@ -18,3 +18,10 @@ function processInput(input: string | number | boolean): string | number {
     return "Inactive";
   }
 }
+
+function formatCoordinate(coordinate: readonly [number, number, string]): string {
+  const latitude = coordinate[0];
+  const longitude = coordinate[1];
+  const locationName = coordinate[2];
+  return "Location: " + locationName + " (" + latitude + ", " + longitude + ")";
+}
